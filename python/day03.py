@@ -40,7 +40,7 @@ def main():
     parser.add_argument("filename", nargs='?', default="inputs/day03.txt")
     args = parser.parse_args()
 
-    # Read inputa file
+    # Read input file
     with open(args.filename, 'r', encoding="utf8") as file:
         data = file.read()
 
