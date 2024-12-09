@@ -95,7 +95,7 @@ func runPart2(data problemData) int {
 }
 
 func main() {
-	var inputFile = flag.String("input", "inputs/day03.txt", "Problem input file")
+	var inputFile = flag.String("input", "inputs/day04.txt", "Problem input file")
 	flag.Parse()
 	data := readData(*inputFile)
 	part1 := runPart1(data)
