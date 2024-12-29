@@ -135,7 +135,7 @@ func runProblem(data problemData) (int, int) {
 }
 
 func main() {
-	var inputFile = flag.String("input", "inputs/day15.txt", "Problem input file")
+	var inputFile = flag.String("input", "inputs/day16.txt", "Problem input file")
 	flag.Parse()
 	data := readData(*inputFile)
 	part1, part2 := runProblem(data)
