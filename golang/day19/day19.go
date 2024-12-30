@@ -65,7 +65,7 @@ func runPart1(data problemData) int {
 }
 
 func tryTowelPart2(data problemData, design string, cache *map[string]int) int {
-	// Like part 1 but we return the number of matches intstead of true/false,
+	// Like part 1 but we return the number of matches instead of true/false,
 	// and run a cache of designs we've already tried.
 	_, ok := (*cache)[design]
 	if ok {
