@@ -31,7 +31,8 @@ func readData(inputFile string) problemData {
 }
 
 func cycle(secret int) int {
-	// This could be optimised but the solution is already sub-second.
+	// This could be optimised but the solution is already ~120ms even without bothering to
+	// cache the generation from part 1.
 	secret = ((secret * 64) ^ secret) % 16777216
 	secret = ((secret / 32) ^ secret) % 16777216
 	secret = ((secret * 2048) ^ secret) % 16777216
@@ -55,7 +56,8 @@ func runPart1(data problemData) int {
 func runPart2(data problemData) int {
 	var totalBananas int
 
-	// Keep track of how many bananas each sequence has generated so far.
+	// Keep track of how many bananas each sequence has generated so far. A flat int is easier
+	// than messing with golang's multidimensional slice-making requirements.
 	bananas := make([]int, 19*20*20*20)
 
 	for _, secret := range data {
